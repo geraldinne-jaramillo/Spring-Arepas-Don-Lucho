@@ -16,11 +16,11 @@ public class Pedido {
         private short totalItems;
         private Integer valorTotal;
 
-        @OneToOne(mappedBy = "pk_pedido")
+        @OneToOne(mappedBy = "pedido")
         private DetalleEntrega detalleEntrega;
 
         @ManyToOne
-        @JoinColumn(name = "repartidor")
+        @JoinColumn(name = "repartidor", referencedColumnName = "id")
         private Repartidor repartidor;
 
         public Pedido() {

@@ -1,4 +1,4 @@
-package com.example.ArepasDonLucho.modelos;
+package com.example.ArepasDonLucho.models;
 
 import jakarta.persistence.*;
 
@@ -32,7 +32,7 @@ public class Repartidor {
     }
     // Relación uno a muchos con Pedido
     @OneToMany(mappedBy = "repartidor")
-    private List<Pedido> pedidos;
+    private List<Pedido> pedido;
 
     public Integer getId() {
         return id;
